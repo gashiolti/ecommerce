@@ -1,0 +1,178 @@
+.orderdetails-wrapper {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    z-index: -1;
+}
+
+.orderdetails-wrapper .orderdetails-main {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 35px;
+    margin: 50px auto;
+    z-index: 1;
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.51);
+    -moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.51);
+    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.51);
+}
+
+.orderdetails-wrapper .orderdetails-main h2 {
+    margin: 15px auto 45px auto;
+}
+
+.orderdetails-wrapper .orderdetails-main .orderdetails-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0 20px 0;
+}
+
+.orderdetails-wrapper .orderdetails-main .orderdetails-info .orderdetails-date {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.orderdetails-wrapper .orderdetails-main .orderdetails-info .orderdetails-orderid {
+    display: flex;
+    flex-direction: column;
+}
+
+.orderdetails-wrapper .orderdetails-main .orderdetails-info .orderdetails-date span, .orderdetails-wrapper .orderdetails-main .orderdetails-info .orderdetails-orderid span {
+    margin: 0 0 10px 0;
+    color: #8B8B8B;
+}
+
+.orderdetails-wrapper .orderdetails-main .orderdetails-product {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.orderdetails-wrapper .orderdetails-main .orderdetails-product .orderdetails-product-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #F8F8F8;
+}
+
+.orderdetails-wrapper .orderdetails-main .orderdetails-product .orderdetails-product-info .orderdetails-product-info-name {
+    width: 70%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-top: 15px;
+}
+
+.orderdetails-wrapper .orderdetails-main .orderdetails-product .orderdetails-product-info .orderdetails-product-info-price {
+    padding-top: 15px;
+}
+
+.orderdetails-wrapper .orderdetails-main .orderdetails-product .orderdetails-product-totalprice {
+    width: 30%;
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+.orderdetails-wrapper .orderdetails-main .orderdetails-tracking {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* .orderdetails-wrapper .orderdetails-main .orderdetails-tracking h2 {
+    /* padding-bottom: 10px; 
+} */
+
+.orderdetails-wrapper .orderdetails-main .orderdetails-tracking .tracking-bar {
+    width: 100%;
+    /* display: flex;
+    flex-direction: column; */
+    /* z-index: -1; */
+}
+
+/* .orderdetails-wrapper .orderdetails-main .orderdetails-tracking .tracking-bar .progressbar {
+} */
+
+.orderdetails-wrapper .orderdetails-main .orderdetails-tracking .tracking-bar .progressbar li {
+    list-style-type: none;
+    float: left;
+    width: 33.33%;
+    position: relative;
+    text-align: center;
+}
+
+.orderdetails-wrapper .orderdetails-main .orderdetails-tracking .tracking-bar .progressbar li:before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.orderdetails-wrapper .orderdetails-main .orderdetails-tracking .tracking-bar .progressbar li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #ddd;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+
+.orderdetails-wrapper .orderdetails-main .orderdetails-tracking .tracking-bar .progressbar li:first-child::after {
+    content: none;
+}
+
+.orderdetails-wrapper .orderdetails-main .orderdetails-tracking .tracking-bar .progressbar li.active {
+    color: green;
+    font-weight: 500;
+    /* color: #151D35; */
+}
+
+.orderdetails-wrapper .orderdetails-main .orderdetails-tracking .tracking-bar .progressbar li.active:before {
+    background-color: green;
+    /* background-color: #151D35; */
+    color: white;
+}
+
+.orderdetails-wrapper .orderdetails-main .orderdetails-tracking .tracking-bar .progressbar li.active + li::after {
+    background-color: green;
+    /* background-color: #151D35; */
+}
+
+.orderdetails-wrapper .orderdetails-main .orderdetails-buttons {
+    width: 100%;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.orderdetails-wrapper .orderdetails-main .orderdetails-buttons a {
+    color: #151D35;
+    background-color: white;
+    border: 2px solid #151D35;
+    padding: 10px 25px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.orderdetails-wrapper .orderdetails-main .orderdetails-buttons a:hover {
+    color: white;
+    background-color: #151D35;
+    transition: .5s ease;
+}

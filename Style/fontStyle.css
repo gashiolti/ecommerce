@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'roboto';
+    src: url('Roboto/Roboto-Regular.ttf');
+    font-style: normal;
+    font-weight: 400;
+}       
+
+@font-face {
+    font-family: "firacode";
+    src: url('Fira_Code/static/FiraCode-Regular.ttf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "opensans";
+    src: url('Open_Sans/OpenSans-Regular.ttf');
+    font-style: normal;
+    font-weight: 400;
+}

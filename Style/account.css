@@ -1,0 +1,249 @@
+/* ACCOUNT INFORMATION PAGE ------------------------------------------------------------------------------*/
+.col-100 {
+    width: 100%;
+    margin: 0;
+    position: relative;
+  }
+  
+  .col-100 .col-83 {
+    width: 83%;
+    /* height: 800px; */
+    /* margin: 20px auto 20px auto; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+      "icon icon personal-details personal-details personal-details personal-details personal-details"
+      "icon icon personal-details personal-details personal-details personal-details personal-details"
+      "money-spent money-spent personal-details personal-details personal-details personal-details personal-details"
+      "money-spent money-spent email email email email email"
+      ". . phone-nr phone-nr phone-nr phone-nr phone-nr";
+  }
+  
+  .icon { 
+    grid-area: icon; 
+    border: 1px solid rgb(236, 236, 236);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .personal-details { 
+    grid-area: personal-details;
+    border: 1px solid rgb(236, 236, 236);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  
+  .money-spent { 
+    grid-area: money-spent; 
+    border: 1px solid rgb(236, 236, 236);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .email { 
+    grid-area: email; 
+    border: 1px solid rgb(236, 236, 236);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .phone-nr { 
+    grid-area: phone-nr; 
+    border: 1px solid rgb(236, 236, 236);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .icon .icon-holder {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 15px;
+  }
+  
+  
+  .personal-details .pd-top, .email .pd-top, .phone-nr .pd-top {
+    width: 95%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .personal-details .pd-top h3, .email .pd-top h3, .phone-nr .pd-top h3 {
+    font-size: 18px;
+    padding-top: 6px;
+  }
+  
+  .personal-details .pd-top button, .email .pd-top button, .phone-nr .pd-top button {
+    cursor: pointer;
+    height: 15px;
+    color: rgb(87, 85, 85);
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    outline: none;
+  }
+  
+  .personal-details .pd-bottom, .email .pd-bottom, .phone-nr .pd-bottom {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+  }
+  
+  .email .pd-bottom {
+    height: auto;
+  }
+  
+  .phone-nr .pd-bottom {
+    height: auto;
+  }
+  
+  .personal-details .pd-bottom .pd-bottom-1, .email .pd-bottom .pd-bottom-1, .phone-nr .pd-bottom .pd-bottom-1 {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  
+  .personal-details .pd-bottom .pd-bottom-1 span, .email .pd-bottom .pd-bottom-1 span, .phone-nr .pd-bottom .pd-bottom-1 span {
+    padding-top: 10px;
+    padding-right: 5px;
+    color: rgb(99, 98, 98);
+  }
+  
+  .personal-details .pd-bottom .pd-bottom-2, .email .pd-bottom .pd-bottom-2, .phone-nr .pd-bottom .pd-bottom-2 {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .personal-details .pd-bottom .pd-bottom-2 span, .email .pd-bottom .pd-bottom-2 span, .phone-nr .pd-bottom .pd-bottom-2 span {
+    padding-top: 10px;
+    padding-left: 5px;
+  }
+  
+  .money-spent .icon-holder {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 15px;
+  }
+  
+  /* FORM */
+  .edit1, .edit2, .edit3 {
+    width: 100%;
+    /* height: 100%; */
+    /* background-color: rgb(255, 255, 255); */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    opacity: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+    /* border: 2px solid red; */
+    transform: translateY(-50%);
+  }
+  
+  .edit1 .form-wrapper, .edit2 .form-wrapper, .edit3 .form-wrapper {
+    width: 400px;
+    /* height: 600px; */
+    background-color: rgb(235, 235, 235);
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+    /* margin: auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    position: relative;
+    display: none;
+    border: 2px solid rgb(221, 221, 221);
+  }
+  
+  .edit1 .form-wrapper .edit-input, .edit2 .form-wrapper .edit-input, .edit3 .form-wrapper .edit-input {
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px auto 10px auto;
+  }
+  
+  .edit1 .form-wrapper .edit-input-button button, .edit2 .form-wrapper .edit-input-button button, .edit3 .form-wrapper .edit-input-button button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    font-size: 16px;
+    /* float: right; */
+    outline: none;
+    font-weight: 600;
+    background-color: rgb(235, 235, 235);
+    margin: 6px 10px 15px 91%;
+    cursor: pointer;
+    /* margin-left: 92%; */
+  }
+  
+  .edit1 .form-wrapper .edit-input label, .edit2 .form-wrapper .edit-input label, .edit3 .form-wrapper .edit-input label {
+    font-size: 16px;
+    color: black;
+    padding: 10px;
+    font-family: inherit;
+    padding-left: 0;
+  }
+  
+  .edit1 .form-wrapper .edit-input input, .edit2 .form-wrapper .edit-input input, .edit3 .form-wrapper .edit-input input {
+    width: 230px;
+    padding: 7px 8px;
+    border: 1px solid rgb(221, 221, 221);
+    outline: none;
+  }
+  
+  .edit1 .form-wrapper .edit-input select, .edit2 .form-wrapper .edit-input select, .edit3 .form-wrapper .edit-input select  {
+    width: 247px;
+    padding: 7px 8px;
+    border: none;
+    outline: none;
+  }
+  
+  .edit1 .form-wrapper .edit-input input[type="submit"], .edit2 .form-wrapper .edit-input input[type="submit"], .edit3 .form-wrapper .edit-input input[type="submit"] {
+    width: 350px;
+    border: none;
+    background-color: blue;
+    color:white;
+    padding: 12px 0;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+
+
+
+/* RESPONSIVNESS==================================================== */
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  
+  .col-100 .col-83 {
+    width: 98%;
+}
+}
