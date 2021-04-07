@@ -107,19 +107,14 @@ function createUser($conn, $email, $password, $fname, $lastname, $age, $gender, 
 
     mysqli_stmt_bind_param($stmt2, "iissssss", $lastID, $age, $gender, $adress, $city, $country, $postalCode, $phoneNumber);
     mysqli_stmt_execute($stmt2);
-    mysqli_stmt_close($stmt);
-    mysqli_close($conn);
+    $userExists = userEmailExists($conn, $email);
     session_start();
     $_SESSION["user"] = $userExists["email"];
     $_SESSION["role"] = $userExists["roleID"];
+    $_SESSION["userID"] = $userExists["userID"];
+    mysqli_stmt_close($stmt2);
+    mysqli_close($conn);
     header("location: ../index.php");
-
-    // if(mysqli_multi_query($conn, $sql)) {
-    //     header("location: ../index.php");
-    //     exit();
-    // } else {
-    //     die(mysqli_error($conn));
-    // }
 
 }
 
