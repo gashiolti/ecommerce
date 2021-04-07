@@ -1,6 +1,5 @@
 <?php
     session_start();
-    // require_once '../validation/shc.val.php';
     require_once (dirname(__FILE__) .'/../dbh.inc.php');
     include (dirname(__FILE__) .'/productdisplay.php');
     require_once (dirname(__FILE__) .'/../functions/prddata.func.php');
@@ -116,7 +115,7 @@
                             // count products in cart
                             // $numOfPrds = 0;
 
-                            if(!isset($_SESSION["user"]) && !isset($_SESSION["role"])) 
+                            if(!isset($_SESSION["userID"]) && !isset($_SESSION["role"])) 
                             {
                                 echo '<li id="login"><a href="login.php"><i class="fas fa-sign-in-alt"></i> Log In</a></li>';
                                 echo '<li><button id="cart" class="shoppingCart" onclick="cartPopUp()"></button><span class="badge">0</span></a></li>';
