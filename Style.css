@@ -210,11 +210,6 @@ body {
     outline: none; 
 }
 
-.wrapper-account {
-    width: 83%;
-    margin: auto;
-  }
-  
   .account-info {
       background: white;
       width: 200px;
@@ -226,7 +221,7 @@ body {
       justify-content: flex-start;
       align-items: stretch;
       border: 1px solid rgb(221, 216, 216);
-      display: none;
+      /* display: none; */
       right: 11.6%;
     margin-top: -10px; 
     z-index: 1;
