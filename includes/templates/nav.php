@@ -146,8 +146,8 @@
     </div>
 
     <!-- account info dropdown============================================================================================================ -->
-    <div class="wrapper-account">
-        <div class="account-info" id="accountinfo">
+    <!-- <div class="wrapper-account" id="wrapper-account"> -->
+        <div class="account-info" id="accountinfo" style="display:none;">
             <div class="info">
                 <span class="close"><i class="fas fa-times-circle"></i></span>
                 <ul>
@@ -163,12 +163,12 @@
             </div>
         </div>
 
-    </div>
+    <!-- </div> -->
 
     <!-- shopping cart dropdown========================================================================================================= -->
-    <div class="shoppingCart-container">
+    <!-- <div class="shoppingCart-container"> -->
         <form action="" method='POST'>
-            <div class='shopping-cart' id='shoppingcart'>
+            <div class='shopping-cart' id='shoppingcart' style="display:none;">
                 <div class='product-wrapper'>
                     <span class="closeCart"><i class="fas fa-times-circle"></i></span>
                     <div class='shopping-cart-header'>
@@ -222,7 +222,7 @@
                 
             </div>    
         </form>            
-    </div>
+    <!-- </div> -->
 
     <!-- NAVIGATION================================================================================================================= -->
     <nav id="header-nav" style="background-color: #FFFFFF; border-bottom: 1px solid #EBEBEB;">
