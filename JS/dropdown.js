@@ -5,8 +5,10 @@ function cartPopUp() {
   var btn = document.getElementById('cart');
   var span = document.getElementsByClassName("closeCart")[0];
 
-  btn.onclick = function() {
+  if(modal.style.display === "none") {
     modal.style.display = "block";
+  } else {
+    modal.style.display = "none";
   }
 
   span.onclick = function() {
@@ -22,42 +24,26 @@ function cartPopUp() {
 }
 
 function accountPopUp() {
-  var modal = document.getElementById('accountinfo');
-  var btn = document.getElementById('account');
-  var span = document.getElementsByClassName("close")[0];
 
-  btn.onclick = function() {
-    modal.style.display = "block";
+  var span = document.getElementsByClassName("close")[0];
+  var div = document.getElementById('accountinfo');
+
+  if(div.style.display === "none") {
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
   }
 
   span.onclick = function() {
-    modal.style.display = "none";
+    div.style.display = "none";
   }
 
   //When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == modal) {
-      modal.style.display = "none";
+      div.style.display = "none";
     }
   }
 }
-  // (function(){
- 
-  //   $("#cart").on("click", function() {
-  //     $("#shoppingcart").fadeToggle( "fast");
-  //   });
-    
-  // })();
 
-// // FUNCTION FOR ACCOUNT DROPDOWN INFO
-//   (function(){
- 
-//     $("#account").on("click", function() {
-//       $(".account-info").fadeToggle( "fast");
-//     });
-    
-//   })();
 
-// function popUp() {
-//   var popup = document.getElementById("shoppingcart");
-//   popup.classList.toggle("show");
