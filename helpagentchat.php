@@ -133,8 +133,11 @@
                 } ?>
 
         <div class="main">
-            <!-- <div class="main-wrapper"> -->
-            <?php include 'includes/getmessageclient.inc.php'; ?>
+            <div class="main-wrapper">
+
+            <?php 
+                include 'includes/getmessageclient.inc.php'; 
+            ?>
 
 
         
@@ -222,7 +225,7 @@
                     <button type="submit" name="send" class="send"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                 </div>
             </form>  -->
-            <!-- </div>-->
+            </div>
         </div>
 
 
